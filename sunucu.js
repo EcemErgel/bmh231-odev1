@@ -18,6 +18,9 @@ const server = http.createServer((req, res) => {
   if (req.url === '/') {
     gonder(res, 200, 'text/html',
       '<h1>BMH231 Web Programlama Ödev 1</h1><a href="/hakkimda">Hakkımda</a>');
+  } else if (req.url === '/hakkimda') {
+    gonder(res, 200, 'text/html',
+      '<h1>Hakkımda</h1><p>Merhaba, ben Ecem Ergel. Manisalıyım. 19 yaşındayım ve Yozgat Bozok Üniversitesinde Bilgisayar Mühendisliği okuyorum.</p>');
   } else if (req.url === '/api/ders') {
     gonder(res, 200, 'application/json',
       JSON.stringify({ kod: 'BMH231', ad: 'Web Programlama', gun: 'Cuma' }));
